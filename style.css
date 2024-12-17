@@ -1,0 +1,8 @@
+/* External Css */
+
+p{
+    color: red;
+    background-color: green !important;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}

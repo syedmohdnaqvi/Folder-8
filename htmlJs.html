@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>
+        hello
+    </h1>
+
+    <h1>
+        Good
+    </h1>
+
+    <p class="a1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus laboriosam excepturi suscipit animi porro
+        atque? Repellendus, laudantium dolorum modi aspernatur dicta numquam nostrum! Quisquam veritatis amet mollitia
+        hic odio. Eum?
+    </p>
+
+    <div id="name">
+        good morning
+    </div>
+
+
+    <button onmouseover="over()" onmouseout="out()">
+        Computer
+    </button>
+    <br>
+    <img id="logo" src="images/logo.jpg" style="width: 200px;height: 200px;display: none;">
+
+    <br><br>
+
+
+    <img id="bulb" onmouseover="over2()" onmouseout="out2()" src="images/off.gif" alt="">
+
+
+    <br><br><br><br><br><br><br><br>
+    <script>
+
+        var a = document.getElementsByTagName('h1')[1].style
+        var b = document.getElementsByClassName("a1")[0].style
+
+        a.color = 'red'
+
+        a.border = 'solid'
+        a.display = 'inline'
+
+        b.backgroundColor = 'red'
+
+        b.padding = '10px'
+
+
+        document.getElementById("name").style.fontSize = "50px"
+
+
+        function over() {
+
+            document.getElementById("logo").style.display = "block"
+
+
+        }
+
+
+        function over2() {
+
+
+            document.getElementById('bulb').src = "images/on.gif"
+
+        }
+
+        function out2() {
+
+
+            document.getElementById('bulb').src = "images/off.gif"
+
+        }
+
+
+        function out() {
+
+            document.getElementById("logo").style.display = "none"
+
+        }
+
+
+    </script>
+</body>
+
+</html>

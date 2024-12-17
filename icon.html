@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <span onmouseover="over()" onmouseout="out()">Corona Virus</span>
+
+    <img src="images/coronaVirus.svg" width="20px" style="visibility: hidden;">
+    <br>
+    onchange
+    <input type="text" onchange="change()">
+    <br><br>
+    onkeyup
+    <input type="text" onkeyup="up()">
+
+
+    <script>
+
+        function over() {
+            document.getElementsByTagName('img')[0].style.visibility = 'visible'
+        }
+
+
+        function out() {
+            document.getElementsByTagName('img')[0].style.visibility = 'hidden'
+        }
+
+
+        function change() {
+            a = document.getElementsByTagName('input')[0].value;
+
+            document.getElementsByTagName('input')[0].value = a.toUpperCase();
+        }
+
+        function up() {
+            b = document.getElementsByTagName('input')[1].value;
+
+            document.getElementsByTagName('input')[1].value = b.toUpperCase();
+        }
+    </script>
+</body>
+
+</html>

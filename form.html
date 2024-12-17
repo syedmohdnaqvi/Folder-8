@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Keyframe animation for shape divider */
+        @keyframes shapeAnimation {
+            0% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(100%);
+            }
+        }
+
+        /* Apply animation to the shape divider */
+        #shapeDivider {
+            animation: shapeAnimation 10s infinite linear;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+
+<button onclick="fone()">
+    Apply Online
+</button>
+
+<button onclick="ftwo()">
+    Continue With Application
+</button>
+
+
+<div style="height: 200px;width: 300px; background-color: #e5e5e5;padding-left: 50px; position: relative;">
+    <svg id="shapeDivider" viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+        <path d="M0.00,49.98 C178.40,-42.26 305.77,154.18 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #ffffff;"></path>
+    </svg>
+
+    <form id="one" style="display: block;">
+        <br>
+        Apply Online
+        <br>
+        <input type="text" placeholder="Enter Name:"> <br><br>
+        <input type="number" placeholder="Enter Number:"> <br><br>
+        <button>Submit</button>
+    </form>
+
+    <form id="two" style="display: none;">
+        <br>
+        Continue With Application
+        <br>
+        <input type="text" placeholder="Enter Name:"> <br><br>
+        <input type="number" placeholder="Enter Number:"> <br><br>
+        <input type="email" placeholder="Enter Your mail:"> <br><br>
+        <button>Submit</button>
+    </form>
+</div>
+
+<script>
+    function ftwo(){
+        document.getElementById("two").style.display = 'block'
+        document.getElementById("one").style.display = 'none'
+    }
+
+    function fone(){
+        document.getElementById("one").style.display = 'block'
+        document.getElementById("two").style.display = 'none'
+    }
+</script>
+</body>
+</html>
